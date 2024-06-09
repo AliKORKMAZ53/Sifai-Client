@@ -1,46 +1,62 @@
 /* public/style.css */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  background: #f0f0f0;
+  background: linear-gradient(to right, #4facfe, #00f2fe); /* Gradient background */
 }
 
 .container {
-  text-align: center;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
 }
 
 .form-group {
-  margin-bottom: 15px;
-  text-align: left;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-weight: bold;
+  color: #333;
 }
 
-input {
+select {
   width: 100%;
   padding: 10px;
   font-size: 16px;
   border-radius: 5px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+  border: 2px solid #ddd;
+  background: #f9f9f9;
 }
 
-.error {
-  color: red;
-  margin-top: 10px;
+#question-box {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#question {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #007BFF;
+  background: #E8F0FE;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0;
 }
 
 button {
@@ -51,15 +67,24 @@ button {
   background: #007BFF;
   color: white;
   cursor: pointer;
-  margin-top: 10px;
+  margin: 10px 0;
+  width: 100%;
+  max-width: 250px;
+  transition: background 0.3s;
 }
 
 button:hover {
   background: #0056b3;
 }
 
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
 @media (max-width: 600px) {
   .container {
-    width: 90%;
+    width: 95%;
+    padding: 20px;
   }
 }
