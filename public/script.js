@@ -167,5 +167,6 @@ async function onTopicChange() {
   } else {
     // Show button to get questions
     document.getElementById('refresh-btn').style.display = 'inline-block';
+	document.getElementById('subtopic-group').style.display = 'none';
   }
 }

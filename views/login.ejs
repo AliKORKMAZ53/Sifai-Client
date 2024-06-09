@@ -1,4 +1,4 @@
-<!-- views/login.ejs -->
+<!-- views/Giriş.ejs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +9,7 @@
 </head>
 <body>
   <div class="container">
+    <h2>Giriş</h2>
     <form action="/login" method="POST">
       <div class="form-group">
         <label for="username">Kullanıcı Adı:</label>
@@ -23,6 +24,7 @@
       <% } %>
       <button type="submit">Giriş</button>
     </form>
+	    <p class="footer-text">Veritabanı hareketsizlik durumunda 20 dakikada bir uykuya geçmektedir. Bir sonraki sorguda uyanması 1 dakikaya kadar sürebilir</p> <!-- Footer text -->
   </div>
 </body>
 </html>
