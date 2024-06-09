@@ -1,0 +1,44 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Question</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-group">
+      <label for="book-select">Kitap Seç:</label>
+      <select id="book-select" onchange="onBookChange()">
+        <option value="">Kitap Seç</option>
+        <% books.forEach(book => { %>
+          <option value="<%= book._id %>"><%= book._id %></option>
+        <% }) %>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="topic-select">Soru Türü Seç:</label>
+      <select id="topic-select" onchange="onTopicChange()">
+        <option value="">Soru Türü</option>
+        <option value="Ibare">Ibare</option>
+        <option value="Malumat">Malumat</option>
+      </select>
+    </div>
+    <div class="form-group" id="subtopic-group" style="display: none;">
+      <label for="subtopic-select">Choose a Sub Topic:</label>
+      <select id="subtopic-select">
+        <option value="">Select a Sub Topic</option>
+      </select>
+    </div>
+    <div id="question-box">
+      <p id="question">Select a book and topic to get a question.</p>
+    </div>
+    <button id="refresh-btn" style="display: none;" onclick="fetchQuestion()">İbare Sorusu Getir</button>
+    <button id="related-btn" style="display: none;" onclick="fetchRelatedQuestion()">Terkip Sorusu Getir</button>
+    <button id="similar-btn" style="display: none;" onclick="fetchSimilarQuestion()">Kelime Sorusu Getir</button>
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>
